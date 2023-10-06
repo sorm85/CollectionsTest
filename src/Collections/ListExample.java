@@ -1,14 +1,12 @@
 package Collections;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
 
 public class ListExample {
 
     public  List<String> arrayList = new ArrayList<>();
     public Vector <String> vectorList = new Vector<>();
+    public LinkedList <String> linkedList = new LinkedList<>();
     public ListExample () {
 //        setListArray();
 //        setVectorList();
@@ -35,5 +33,13 @@ public class ListExample {
         }
         vectorList.stream().forEach(System.out::println);
         System.out.println("setVectorList finish: "+listNumberLengt);
+    }
+
+    public void setLinkedList () {
+        linkedList.add("A");           // Agrega al final
+        linkedList.addFirst("Inicio"); // Agrega al principio
+        linkedList.addLast("Final");   // Agrega al final
+        linkedList.add(1, "B");        // Agrega en la posición 1
+        linkedList.stream().forEach(System.out::println);
     }
 }
