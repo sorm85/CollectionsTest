@@ -1,16 +1,21 @@
 import Collections.ListExample;
+import Collections.SetExample;
 
 import java.util.Random;
 
 public class ControllerCollection {
     
     public ListExample listExample;
+    public SetExample setExample;
     public Thread thread1,thread2,thread3,thread4;
     public ControllerCollection () {
         listExample = new ListExample();
+        setExample = new SetExample();
 //        testThread1();
 //        testThread2();
 //        listExample.setLinkedList();
+        setExample.setTest1();
+
 
     }
     
