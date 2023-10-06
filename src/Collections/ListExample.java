@@ -7,7 +7,7 @@ import java.util.Vector;
 
 public class ListExample {
 
-    public  List<Integer> arrayList = new ArrayList<>();
+    public  List<String> arrayList = new ArrayList<>();
     public Vector <String> vectorList = new Vector<>();
     public ListExample () {
 //        setListArray();
@@ -20,7 +20,7 @@ public class ListExample {
         Integer listNumberLengt = random.nextInt(50);
 
         for (int i = 0; i < listNumberLengt ; i++) {
-            arrayList.add(random.nextInt());
+            arrayList.add( Integer.toString(random.nextInt()));
         }
          arrayList.stream().forEach(System.out::println);
         System.out.println("setListArray finish: "+listNumberLengt);

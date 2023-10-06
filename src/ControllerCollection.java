@@ -5,47 +5,62 @@ import java.util.Random;
 public class ControllerCollection {
     
     public ListExample listExample;
+    public Thread thread1,thread2,thread3,thread4;
     public ControllerCollection () {
         listExample = new ListExample();
-//        testThread1();
-        testThread2();
+        testThread1();
+//        testThread2();
+
     }
     
     public void testThread1 () {
-        Thread thread1 = new Thread(new Runnable() {
+        thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 Random random = new Random();
+                String name = "List1";
                 Integer listNumberLengt = random.nextInt(50);
 
                 for (int i = 0; i < listNumberLengt ; i++) {
-                    listExample.arrayList.add(random.nextInt(50));
+                    listExample.arrayList.add(name+": "+ Integer.toString(random.nextInt(50)));
                 }
-                listExample.arrayList.stream().forEach(elemento -> System.out.println("thread1: "+elemento));
-                System.out.println("setListArray finish: "+listNumberLengt);
+//                listExample.arrayList.stream().forEach(elemento -> System.out.println("thread1: "+elemento));
+//                System.out.println("setListArray finish: "+listNumberLengt);
 
             }
         });
-        Thread thread2 = new Thread(new Runnable() {
+        thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 Random random = new Random();
+                String name = "List2";
                 Integer listNumberLengt = random.nextInt(50);
 
                 for (int i = 0; i < listNumberLengt ; i++) {
-                    listExample.arrayList.add(random.nextInt(50));
+                    listExample.arrayList.add(name+": "+ Integer.toString(random.nextInt(50)));
                 }
 //                listExample.arrayList.stream().forEach(System.out::println);
-                listExample.arrayList.stream().forEach(elemento -> System.out.println("thread2: "+elemento));
-                System.out.println("setListArray finish: "+listNumberLengt);
+//                listExample.arrayList.stream().forEach(elemento -> System.out.println("thread2: "+elemento));
+//                System.out.println("setListArray finish: "+listNumberLengt);
 
             }
         });
         thread1.start();
         thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("mexicana: "+listExample.arrayList);
+
+
     }
     public void testThread2 () {
-        Thread thread1 = new Thread(new Runnable() {
+        thread3 = new Thread(new Runnable() {
             @Override
             public void run() {
                 Random random = new Random();
@@ -62,8 +77,9 @@ public class ControllerCollection {
                 System.out.println(name+": "+listNumberLengt);
 
             }
+
         });
-        Thread thread2 = new Thread(new Runnable() {
+        thread4 = new Thread(new Runnable() {
             @Override
             public void run() {
                 Random random = new Random();
@@ -79,11 +95,13 @@ public class ControllerCollection {
 
             }
         });
-        thread1.start();
-        thread2.start();
-
+        thread3.start();
+        thread4.start();
+        while(thread4.isAlive()){
+            System.out.println("mexicana: "+listExample.vectorList);
+        }
         System.out.println("FINAL");
-        listExample.vectorList.stream().forEach(System.out::println);
+//        listExample.vectorList.stream().forEach(System.out::println);
 
     }
 }
