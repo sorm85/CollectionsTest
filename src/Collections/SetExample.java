@@ -20,13 +20,11 @@ public class SetExample {
         Random random2 = new Random();
         for (int i = 0; i <100 ; i++) {
             listTest.add(random2.nextInt(1500));
-
         }
         listTest.stream().forEach(System.out::println);
-
-
         for (int i = 0; i < listTest.size(); i++) {
             set1.add(listTest.get(i));
+
         }
 
         set1.stream().forEach(System.out::println);

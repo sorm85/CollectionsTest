@@ -42,4 +42,20 @@ public class ListExample {
         linkedList.add(1, "B");        // Agrega en la posición 1
         linkedList.stream().forEach(System.out::println);
     }
+
+    public List<Integer> setListExample1 (List <Integer> list) {
+        List <Integer> returnList = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+
+            if(!returnList.contains(list.get(i))){
+                System.out.println("no está: "+list.get(i));
+                returnList.add(list.get(i));
+            } else {
+                System.out.println("si están");
+            }
+        }
+
+        return returnList;
+    }
 }

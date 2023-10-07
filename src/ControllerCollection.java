@@ -1,7 +1,8 @@
 import Collections.ListExample;
 import Collections.SetExample;
+import Collections.MapExampleClass;
 
-import java.util.Random;
+import java.util.*;
 
 public class ControllerCollection {
     
@@ -14,7 +15,9 @@ public class ControllerCollection {
 //        testThread1();
 //        testThread2();
 //        listExample.setLinkedList();
-        setExample.setTest1();
+//        setExample.setTest1();
+
+        new MapExampleClass().setMap1();
 
 
     }
