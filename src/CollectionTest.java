@@ -1,7 +1,4 @@
-import exercises.Anagram;
-import exercises.FindFactorial;
-import exercises.Palindrome;
-import exercises.ReversNumber;
+import exercises.*;
 
 public class CollectionTest {
     public static void main (String [] args) {
@@ -9,6 +6,8 @@ public class CollectionTest {
 //        new FindFactorial();
 //        new Palindrome();
 //        new Anagram();
-        new ReversNumber(987654);
+//        new ReversNumber(987654);
+        new Loops2();
     }
+
 }
