@@ -1,3 +1,4 @@
+import JavaCoursera8.DatesAndTimes;
 import exercises.*;
 
 public class CollectionTest {
@@ -7,7 +8,8 @@ public class CollectionTest {
 //        new Palindrome();
 //        new Anagram();
 //        new ReversNumber(987654);
-        new Loops2();
+//        new Loops2();
+        new DatesAndTimes();
     }
 
 }
