@@ -7,7 +7,8 @@ public class CollectionTest {
 //        new Palindrome();
 //        new Anagram();
 //        new ReversNumber(987654);
-        new Loops2();
+//        new Loops2();
+        new GetPorcentage();
     }
 
 }
