@@ -1,4 +1,3 @@
-import JavaCoursera8.DatesAndTimes;
 import exercises.*;
 
 public class CollectionTest {
@@ -9,8 +8,7 @@ public class CollectionTest {
 //        new Anagram();
 //        new ReversNumber(987654);
 //        new Loops2();
-        new SubString();
-//        new DatesAndTimes();
+        new GetPorcentage();
     }
 
 }
