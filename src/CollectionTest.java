@@ -9,7 +9,8 @@ public class CollectionTest {
 //        new Anagram();
 //        new ReversNumber(987654);
 //        new Loops2();
-        new DatesAndTimes();
+        new SubString();
+//        new DatesAndTimes();
     }
 
 }
