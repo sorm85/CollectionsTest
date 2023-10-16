@@ -5,10 +5,12 @@ public class CollectionTest {
 //        new ControllerCollection();
 //        new FindFactorial();
 //        new Palindrome();
-//        new Anagram();
+        new Anagram();
 //        new ReversNumber(987654);
 //        new Loops2();
-        new GetPorcentage();
+//        new SubString();
+//        new GetPorcentage();
+
     }
 
 }
