@@ -22,7 +22,7 @@ public class StringSplit {
         }
     }
     protected void patternExample () {
-        int testCases = 1
+        int testCases = 1;
         while(testCases>0){
             String pattern = "[AZ[a-z](a-z)";
             //Write your code
