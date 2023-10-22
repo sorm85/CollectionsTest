@@ -1,5 +1,7 @@
 package exercises;
 
+import java.util.regex.Pattern;
+
 public class StringSplit {
     public StringSplit () {
         StringStr();
@@ -19,5 +21,18 @@ public class StringSplit {
             System.out.println(str);
         }
     }
-
+    protected void patternExample () {
+        int testCases = 1
+        while(testCases>0){
+            String pattern = "[AZ[a-z](a-z)";
+            //Write your code
+            try {
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (Exception ie) {
+                System.out.println("Invalid");
+            }
+            testCases--;
+        }
+    }
 }
