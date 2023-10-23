@@ -1,3 +1,5 @@
+import Collections.InterfacesFunctionalExamples;
+import Collections.LambdaExpresionExample;
 import exercises.*;
 
 public class CollectionTest {
@@ -10,8 +12,9 @@ public class CollectionTest {
 //        new Loops2();
 //        new SubString();
 //        new GetPorcentage();
-        new StringSplit();
-
+//        new StringSplit();
+//        new InterfacesFunctionalExamples();
+        new LambdaExpresionExample();
     }
 
 }
